@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"p">;
+
+const { class: c, ...rest } = Astro.props;
+
+const classes = ["font-sans", "text-base", "leading-relaxed", "mb-6"].concat(
+  c?.split(" ") ?? [],
+);
+---
+
+<p class:list={classes} {...rest}><slot /></p>

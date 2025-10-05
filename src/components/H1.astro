@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"h1">;
+
+const { class: c, ...rest } = Astro.props;
+
+const classes = [
+  "font-serif",
+  "font-medium",
+  "text-4xl",
+  "md:text-5xl",
+  "mb-6",
+  "md:mb-8",
+].concat(c?.split(" ") ?? []);
+---
+
+<h1 class:list={classes} {...rest}><slot /></h1>
