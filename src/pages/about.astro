@@ -1,10 +1,63 @@
 ---
+import { Image } from "astro:assets";
 import H1 from "../components/H1.astro";
+import H2 from "../components/H2.astro";
+import H3 from "../components/H3.astro";
+import P from "../components/P.astro";
 import Layout from "../components/Layout.astro";
+import andrea from "../assets/andrea.webp";
 ---
 
 <Layout title="About">
   <H1 slot="hero" margins={false}>About</H1>
 
-  About me
+  <H2>Bio</H2>
+  <H3 class="text-gray-600 text-xl">Andrea de la Motte</H3>
+
+  <Image
+    class="float-right max-w-40 md:max-w-50 rounded-xl ml-4"
+    src={andrea}
+    alt="A picture of Andrea. She's got blonde hair and a taupe vest on."
+  />
+
+  <P>
+    I am so excited to be in this space offering care and support for your good
+    stories. I fell in love with this work several years ago when I started my
+    journey with the Allender Center and began my training experience. I noticed
+    how much it transformed my life more than any other work that I had been
+    doing. It is remarkable what can happen when we experience the goodness of
+    other people stepping into our story and naming both the beauty and the
+    pain. Our hearts long to be seen and known, and this work is just that. It
+    is a coming home to the places that have been cast out or pushed aside.
+  </P>
+
+  <P>
+    I am trained in Narrative Focused Trauma Care through the Allender Center at
+    the Seattle School of Psychology. My passion is creating spaces where it is
+    safe to bring stories that shape who we are and finding the beauty within
+    them. I believe that we all were created to bring beauty just by being who
+    we are, and yet so often that beauty gets buried beneath pain, shame, and
+    experiences of harm. We were never meant to do this work alone. I am honored
+    to walk into these places and delighted to discover the beauty that is
+    uniquely you.
+  </P>
+
+  <P>
+    I also offer group storywork with my colleague Abby Roos over at Discovering
+    You. I believe in the power of being seen and known by a community in a safe
+    and kind atmosphere. It is a beautiful, life changing experience and I
+    encourage you to check that out. We offer both in person and online groups.
+  </P>
+
+  <H3>A Note on My Role</H3>
+  <P>
+    I am trained in Narrative Focused Trauma Care through the Allender Center at
+    the Seattle School of Theology. It is important to note that I am a coach,
+    not a licensed therapist, clinical counselor, or medical professional. My
+    passion is creating spaces where it is safe to bring stories that shape who
+    we are and finding the beauty within them. My role is to walk with you as we
+    explore, understand, and create a future empowered, not hindered, by your
+    story. This coaching work is not a substitute for clinical therapy or mental
+    health treatment.
+  </P>
 </Layout>
