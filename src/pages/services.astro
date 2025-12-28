@@ -1,10 +1,35 @@
 ---
 import H1 from "../components/H1.astro";
+import H2 from "../components/H2.astro";
+import P from "../components/P.astro";
 import Layout from "../components/Layout.astro";
 ---
 
 <Layout title="Services">
   <H1 slot="hero" margins={false}>Services</H1>
 
-  Info about services
+  <H2>Individual Story Work Coaching</H2>
+  <P>
+    I offer individual coaching sessions to help you explore your story in a
+    safe and supportive environment. Through engaging your stories we can work
+    together to understand how your past has shaped who you are today, find
+    healing from past wounds, and live with more freedom and purpose.
+  </P>
+  <P>All sessions are conducted virtually.</P>
+
+  <H2>Session Details</H2>
+  <P><b>Duration:</b> 50 minutes</P>
+  <P><b>Cost:</b> $120 per session</P>
+
+  <H2>Free Consultation</H2>
+  <P>
+    If you're interested in learning more, I offer a free consultation to see if
+    we're a good fit. Please email me to schedule an appointment.
+  </P>
+  <P>
+    <b>Email: </b>
+    <a href="mailto:andrea@restoredbeautycoaching.com" class="text-blue-500"
+      >andrea@restoredbeautycoaching.com</a
+    >
+  </P>
 </Layout>
