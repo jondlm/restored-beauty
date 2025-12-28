@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"ul"> & {
+  margins?: boolean;
+};
+
+const { class: c, margins = true, ...rest } = Astro.props;
+
+const classes = [
+  "list-disc", // Default bullet style
+  "list-outside", // Bullets outside the text block
+  "pl-5", // Padding for indentation
+  margins ? "mb-4" : null, // Margin bottom for spacing after the list
+]
+  .filter((x) => x != null)
+  .concat(c?.split(" ") ?? []);
+---
+
+<ul class:list={classes} {...rest}><slot /></ul>
