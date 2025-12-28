@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import A from "../components/A.astro";
 import H1 from "../components/H1.astro";
 import H2 from "../components/H2.astro";
 import H3 from "../components/H3.astro";
@@ -23,7 +24,8 @@ import andrea from "../assets/andrea.webp";
   <P>
     I am so excited to be in this space offering care and support for your good
     stories. I fell in love with this work several years ago when I started my
-    journey with the <a href="https://theallendercenter.org/">Allender Center</a
+    journey with the <A isExternal href="https://theallendercenter.org/"
+      >Allender Center</A
     > and began my training experience. I noticed how much it transformed my life
     more than any other work that I had been doing. It is remarkable what can happen
     when we experience the goodness of other people stepping into our story and naming
@@ -33,8 +35,10 @@ import andrea from "../assets/andrea.webp";
   </P>
 
   <P>
-    I am trained in <a href="https://theallendercenter.org/about/nftc/"
-      >Narrative Focused Trauma Care</a
+    I am trained in <A
+      isExternal
+      href="https://theallendercenter.org/about/nftc/"
+      >Narrative Focused Trauma Care</A
     > through the Allender Center at the Seattle School of Psychology. My passion
     is creating spaces where it is safe to bring stories that shape who we are and
     finding the beauty within them. I believe that we all were created to bring beauty

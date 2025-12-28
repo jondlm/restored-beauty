@@ -46,3 +46,7 @@
   --font-serif:
     "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
+
+:root {
+  interpolate-size: allow-keywords;
+}

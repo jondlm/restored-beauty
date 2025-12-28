@@ -1,0 +1,27 @@
+---
+import Icon from "./Icon.astro";
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a"> & {
+  isExternal?: boolean;
+};
+
+const { class: c, isExternal = false, ...rest } = Astro.props;
+
+const classes = [
+  "text-blue-500",
+  "hover:text-blue-600",
+  "hover:underline",
+].concat(c?.split(" ") ?? []);
+---
+
+<a class:list={classes} target={isExternal ? "_blank" : null} {...rest}
+  ><slot />{
+    isExternal && (
+      <>
+        {" "}
+        <Icon name="externalLink" size={12} />
+      </>
+    )
+  }</a
+>
