@@ -1,5 +1,31 @@
 @import "tailwindcss";
 
+@theme {
+  --color-merino-50: #f8f4eb;
+  --color-merino-100: #f4eee0;
+  --color-merino-200: #e8dac0;
+  --color-merino-300: #d9c298;
+  --color-merino-400: #c9a36e;
+  --color-merino-500: #be8d51;
+  --color-merino-600: #b07846;
+  --color-merino-700: #93613b;
+  --color-merino-800: #774f35;
+  --color-merino-900: #61412d;
+  --color-merino-950: #332117;
+
+  --color-thunderbird-50: #fef3f2;
+  --color-thunderbird-100: #fee4e2;
+  --color-thunderbird-200: #fecfca;
+  --color-thunderbird-300: #fbada6;
+  --color-thunderbird-400: #f77e72;
+  --color-thunderbird-500: #ee5445;
+  --color-thunderbird-600: #db3727;
+  --color-thunderbird-700: #be2c1e;
+  --color-thunderbird-800: #98271c;
+  --color-thunderbird-900: #7e261e;
+  --color-thunderbird-950: #450f0a;
+}
+
 @font-face {
   font-family: 'Fraunces';
   src: url('/fonts/fraunces.woff2') format('woff2-variations');

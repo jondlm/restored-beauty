@@ -1,18 +1,22 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-type Props = HTMLAttributes<"h1">;
+type Props = HTMLAttributes<"h1"> & {
+  margins?: boolean;
+};
 
-const { class: c, ...rest } = Astro.props;
+const { class: c, margins = true, ...rest } = Astro.props;
 
 const classes = [
   "font-serif",
   "font-medium",
   "text-4xl",
   "md:text-5xl",
-  "mb-6",
-  "md:mb-8",
-].concat(c?.split(" ") ?? []);
+  margins ? "mb-6" : null,
+  margins ? "md:mb-8" : null,
+]
+  .filter((x) => x != null)
+  .concat(c?.split(" ") ?? []);
 ---
 
 <h1 class:list={classes} {...rest}><slot /></h1>

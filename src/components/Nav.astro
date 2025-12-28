@@ -1,0 +1,63 @@
+---
+const navLinks = [
+  { title: "Services", href: "/services" },
+  { title: "About", href: "/about" },
+  { title: "FAQ", href: "/faq" },
+  { title: "Sign Up", href: "/sign-up" },
+];
+---
+
+<script>
+  window.addEventListener("scroll", () => {
+    const atTop = window.scrollY <= 1;
+
+    const scrollWatchElements = document.querySelectorAll("[data-at-top]");
+    scrollWatchElements.forEach((element) => {
+      if (element instanceof HTMLElement) {
+        element.dataset.atTop = String(atTop);
+      }
+    });
+  });
+</script>
+
+<nav
+  data-at-top="true"
+  class="group
+    sm:sticky
+    border-b
+    border-orange-200
+    sm:border-none
+    fixed
+    sm:top-6
+    container
+    mx-auto
+    text-merino-900"
+>
+  <ul
+    class="transition-all duration-800
+      sm:mx-10
+      sm:rounded-t-4xl
+      shadow-sm
+      group-data-[at-top=false]:sm:rounded-b-4xl
+      group-data-[at-top=true]:shadow-none
+      p-4
+      bg-orange-50/70
+      backdrop-blur-md
+      saturate-150
+      flex
+      gap-6"
+  >
+    <li class="mr-auto hover:underline hover:text-merino-950">
+      <a href="/">Home</a>
+    </li>
+    {
+      navLinks.map(({ title, href }) => (
+        <li>
+          <a class="hover:underline hover:text-merino-950" href={href}>
+            {title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
