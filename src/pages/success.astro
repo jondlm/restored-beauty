@@ -1,8 +1,11 @@
 ---
 import H1 from "../components/H1.astro";
+import P from "../components/P.astro";
 import Layout from "../components/Layout.astro";
 ---
 
 <Layout title="Success">
-  <H1 slot="hero" margins={false}>✅ Submission Received</H1>
+  <H1 slot="hero" margins={false}>✅<br />Submission Received</H1>
+
+  <P>Thanks for reaching out! We'll get back to you shortly.</P>
 </Layout>
