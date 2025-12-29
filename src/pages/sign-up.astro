@@ -1,10 +1,138 @@
 ---
 import H1 from "../components/H1.astro";
+import H2 from "../components/H2.astro";
+import P from "../components/P.astro";
 import Layout from "../components/Layout.astro";
 ---
 
 <Layout title="Sign Up">
   <H1 slot="hero" margins={false}>Sign Up</H1>
 
-  Stuff
+  <H2>Begin Your Story Work Journey</H2>
+
+  <P>
+    Story work is a relational, one-on-one process where your experiences are
+    held with care, curiosity, and compassion. Signing up here is the first step
+    toward exploring your story at your own pace, in a safe and supportive
+    space. Once you sign up, I’ll reach out to connect and discuss next steps
+    and answer any questions you have and seeing if story work is a good fit for
+    you. Your information is private and will only be used to contact you about
+    story work sessions.
+  </P>
+
+  <div class="sm:p-4">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input
+        type="hidden"
+        name="access_key"
+        value="1f1dbc77-0816-4eef-ba1a-73f1b553afaf"
+      />
+      <input
+        type="hidden"
+        name="redirect"
+        value="https://restoredbeautycoaching.com/success"
+      />
+
+      <div class="flex gap-4">
+        <div class="mb-5 flex-grow">
+          <label
+            for="first_name"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >First name</label
+          >
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-big-stone-500 focus:border-big-stone-500 block w-full p-2.5"
+            required
+          />
+        </div>
+
+        <div class="mb-5 flex-grow">
+          <label
+            for="last_name"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Last name</label
+          >
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-big-stone-500 focus:border-big-stone-500 block w-full p-2.5"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-big-stone-500 focus:border-big-stone-500 block w-full p-2.5"
+          required
+        />
+      </div>
+
+      <div class="mb-5">
+        <label
+          for="questionaire_why"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Optional Note / What brings you here?</label
+        >
+        <textarea
+          id="questionaire_why"
+          name="questionaire_why"
+          rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-big-stone-500 focus:border-big-stone-500"
+        ></textarea>
+      </div>
+
+      <div
+        for="questionaire_why"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Prefered contact method
+      </div>
+      <div class="mb-3 flex items-center">
+        <input
+          id="contact_method_email"
+          type="radio"
+          value="email"
+          name="contact_method"
+          class="w-4 h-4 rounded-full"
+          checked
+        />
+        <label for="contact_method_email" class="select-none ms-2 text-sm"
+          >Email</label
+        >
+      </div>
+
+      <div class="mb-5 flex items-center">
+        <input
+          id="contact_method_phone"
+          type="radio"
+          value="phone"
+          name="contact_method"
+          class="w-4 h-4 rounded-full"
+        />
+        <label
+          for="contact_method_phone"
+          class="select-none ms-2 text-sm text-heading">Phone</label
+        >
+      </div>
+
+      <!-- ----------------- -->
+
+      <button
+        type="submit"
+        class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center cursor-pointer"
+        >Submit</button
+      >
+    </form>
+  </div>
 </Layout>

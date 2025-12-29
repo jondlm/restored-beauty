@@ -3,7 +3,7 @@ const navLinks = [
   { title: "Services", href: "/services" },
   { title: "About", href: "/about" },
   { title: "FAQ", href: "/faq" },
-  { title: "Sign Up", href: "/sign-up" },
+  { title: "Sign Up", href: "/sign-up", cls: "underline" },
 ];
 ---
 
@@ -55,9 +55,9 @@ const navLinks = [
       <a href="/">Home</a>
     </li>
     {
-      navLinks.map(({ title, href }) => (
+      navLinks.map(({ title, href, cls }) => (
         <li>
-          <a class="hover:underline hover:text-merino-950" href={href}>
+          <a class={`hover:underline hover:text-merino-950 ${cls}`} href={href}>
             {title}
           </a>
         </li>
